@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# For InfinityFree / domain root (files inside htdocs/), use:
+RewriteBase /
+
+# If you uploaded into a subfolder, e.g. htdocs/circuit/, use:
+# RewriteBase /circuit/
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^ index.php [L]

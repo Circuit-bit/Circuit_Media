@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circuit Media</title>
+  <meta name="description" content="Circuit Media — live-feeling device research on GitHub Pages: browse, search, compare, and recommend from the full seeded catalog." />
+  <meta property="og:title" content="Circuit Media" />
+  <meta property="og:image" content="assets/og.png" />
+  <link rel="icon" href="assets/circuit-media-mark.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect) {
+        var base = "/Circuit_Media";
+        var url = new URL(redirect);
+        var path = url.pathname;
+        if (path.indexOf(base) === 0) path = path.slice(base.length) || "/";
+        history.replaceState(null, "", base + (path.startsWith("/") ? path : "/" + path) + url.search + url.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="site-frame">
+    <header class="site-header" id="site-header"></header>
+    <div id="app-root"><p class="route-loading">Loading catalog…</p></div>
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

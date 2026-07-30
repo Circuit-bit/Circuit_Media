@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": "fallback01",
+      "slug": "tech-roundup-phones-tablets-watches-fallback01",
+      "title": "Everyday tech roundup: phones, tablets, and wearables",
+      "excerpt": "A placeholder headline used when live RSS feeds are temporarily unavailable. Fresh stories will appear here automatically once feeds reconnect.",
+      "url": "https://circuitmedia.site.je/devices",
+      "image": null,
+      "sourceName": "Circuit Media",
+      "publishedAt": "2026-07-30T12:00:00+00:00"
+    },
+    {
+      "id": "fallback02",
+      "slug": "flagship-cameras-and-battery-life-fallback02",
+      "title": "What matters in flagship cameras and battery life right now",
+      "excerpt": "Buyer priorities keep shifting toward sustained performance, charging speed, and camera consistency across lighting conditions.",
+      "url": "https://circuitmedia.site.je/recommend",
+      "image": null,
+      "sourceName": "Circuit Media",
+      "publishedAt": "2026-07-29T15:00:00+00:00"
+    },
+    {
+      "id": "fallback03",
+      "slug": "compare-before-you-buy-fallback03",
+      "title": "Compare before you buy: a practical checklist",
+      "excerpt": "Use display, chipset, charging, and software support windows to shortlist devices that fit how you actually use your phone.",
+      "url": "https://circuitmedia.site.je/compare",
+      "image": null,
+      "sourceName": "Circuit Media",
+      "publishedAt": "2026-07-28T10:00:00+00:00"
+    }
+  ]
+}

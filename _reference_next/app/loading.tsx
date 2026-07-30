@@ -1,0 +1,1 @@
+export default function Loading() { return <main className="loading-page" role="status" aria-live="polite"><div className="loading-bar" /><div className="loading-shell"><div /><div /><div /></div><span className="sr-only">Loading verified device data</span></main>; }

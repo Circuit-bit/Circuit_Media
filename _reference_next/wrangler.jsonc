@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "circuit-media",
+  "compatibility_date": "2026-05-22",
+  "workers_dev": true,
+  "preview_urls": true,
+  "main": "./worker/index.ts",
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://circuit-media-review.com"
+  },
+  "assets": {
+    "directory": "dist/client",
+    "not_found_handling": "none",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  }
+}

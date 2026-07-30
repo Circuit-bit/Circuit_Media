@@ -1,0 +1,56 @@
+name: Deploy GitHub Pages app
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Circuit_Media_Review/**"
+      - "scripts/build-github-pages.mjs"
+      - "lib/seed/data/devices.json"
+      - "app/globals.css"
+      - "public/**"
+      - ".github/workflows/github-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build GitHub Pages catalog app
+        run: node scripts/build-github-pages.mjs
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: Circuit_Media_Review
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

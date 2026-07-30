@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# If the project lives in a subdirectory under htdocs, keep RewriteBase in sync
+# with config base_path (default XAMPP path below).
+RewriteBase /Circut_Media_Review_Website_php/
+
+# Serve existing files and directories as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Front controller
+RewriteRule ^ index.php [L]

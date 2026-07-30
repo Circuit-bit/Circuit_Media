@@ -1,0 +1,11 @@
+config/env.php
+.DS_Store
+*.log
+_reference_next/node_modules/
+node_modules/
+
+data/cache/
+*.zip
+circuitmedia-showcase-deploy.zip
+
+data/rate_limits/
